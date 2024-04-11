@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/features/ui/Header";
+import Header from "@/features/layout/Header";
 import SessionWrapper from "@/features/auth/SessionWrapper";
+import Main from "@/features/ui/Main";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <Header />
-          <main>{children}</main>
+          <Main>{children}</Main>
         </body>
       </html>
     </SessionWrapper>

@@ -6,8 +6,9 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 
 import Image from "next/image";
 import Link from "next/link";
-import Modal from "./Modal";
-import AddPost from "./AddPost";
+import Modal from "../ui/Modal";
+import AddPost from "../post/AddPost";
+import LinkButton from "../ui/LinkButton";
 
 export default function Header() {
   const [showModal, setShowModal] = useState(false);
@@ -56,19 +57,14 @@ export default function Header() {
             </button>
             <button onClick={() => signOut()}>
               <img
-                src={session.user?.image}
+                src={session.user?.image || "/insta_logo_image"}
                 alt={`image of ${session.user?.name}`}
                 className="h-10 w-10 rounded-full"
               />
             </button>
           </div>
         ) : (
-          <button
-            onClick={() => signIn()}
-            className="text-sm font-semibold text-blue-500"
-          >
-            Login
-          </button>
+          <LinkButton onClick={() => signIn()}>Login</LinkButton>
         )}
       </nav>
       {showModal && (

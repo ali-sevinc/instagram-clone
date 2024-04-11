@@ -23,7 +23,7 @@ export default function Modal({ children, isOpen, onClose }: PropsType) {
 
   return createPortal(
     <dialog
-      className="backdrop:bg-stone-100/50 max-w-lg w-[95%] p-2 relative border-2 h-[80vh] border-stone-200 rounded-xl shadow-md"
+      className="backdrop:bg-stone-100/50 max-w-2xl w-[95%] p-2 relative border-2 h-[80vh] border-stone-200 rounded-xl shadow-md"
       ref={ref}
       onClose={onClose}
     >

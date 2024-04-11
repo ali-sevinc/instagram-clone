@@ -1,3 +1,5 @@
 # Instagram clone
 
-with next!
+### firebase-storage & firebase-firestore example with NextJS.
+
+Built with: NextJS, firebase, nextAuth(google authantication) & TailwindCSS.

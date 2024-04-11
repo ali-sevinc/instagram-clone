@@ -107,7 +107,7 @@ export default function AddPost({
   async function handleAddPost() {
     if (!caption.trim() || !selectedFile || !imageUrl) return;
     try {
-      const docRef = await addDoc(collection(db, "posts"), {
+      await addDoc(collection(db, "posts"), {
         username: session?.user.username,
         profileImage: session?.user.image,
         caption,
@@ -119,6 +119,7 @@ export default function AddPost({
       setIsLoading(true);
       setSelectedFile(null);
       onCloseModal();
+      location.reload();
     } catch (error) {
       setIsError("Failed to posting.");
     } finally {
