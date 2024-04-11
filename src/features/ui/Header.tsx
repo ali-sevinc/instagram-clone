@@ -73,7 +73,7 @@ export default function Header() {
       </nav>
       {showModal && (
         <Modal isOpen={showModal} onClose={handleCloseModal}>
-          <AddPost />
+          <AddPost onCloseModal={handleCloseModal} />
         </Modal>
       )}
     </header>
