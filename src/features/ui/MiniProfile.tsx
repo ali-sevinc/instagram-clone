@@ -6,7 +6,7 @@ import LinkButton from "./LinkButton";
 export default function MiniProfile() {
   const { data: session } = useSession();
   return (
-    <div className="fixed w-96 px-4 flex items-center justify-between mt-16">
+    <div className="fixed w-96 px-4 flex items-center justify-between mt-8">
       <img
         src={session?.user?.image || "/insta_logo_image.webp"}
         alt={`image of ${session?.user?.name}`}

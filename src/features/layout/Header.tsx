@@ -45,7 +45,7 @@ export default function Header() {
         <input
           type="search"
           placeholder="Search..."
-          className="bg-stone-50 shadow border-stone-300 rounded text-sm w-full py-2 px-4 max-w-xs"
+          className="bg-stone-50 shadow border-stone-300 rounded text-sm w-auto  py-2 px-4 md:max-w-xs"
         />
         {session ? (
           <div className="flex items-center gap-4">
