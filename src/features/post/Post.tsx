@@ -1,3 +1,4 @@
+import Comments from "./Comments";
 import Likes from "./Likes";
 
 type PostType = { id: string; [key: string]: any };
@@ -24,6 +25,7 @@ export default function Post({ post }: { post: PostType }) {
           <span>{post.caption}</span>
         </p>
       </div>
+      <Comments id={post.id} />
     </div>
   );
 }
